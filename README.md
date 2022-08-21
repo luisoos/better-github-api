@@ -69,16 +69,16 @@ Programmed in TypeScript using [`ts-node`](https://www.npmjs.com/package/ts-node
 #### 404 - User not found
 ```json
 { 
-    status: 404, 
-    message: "User not found" 
+    "status": 404, 
+    "message": "User not found" 
 }
 ```
 
 #### Custom error schema
 ```json
 { 
-    status: error.response.status, 
-    message: error.response.statusText 
+    "status": "error.response.status", 
+    "message": "error.response.statusText" 
 }
 ```
 
