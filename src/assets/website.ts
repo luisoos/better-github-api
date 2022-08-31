@@ -123,7 +123,8 @@ label {
             "forks": number
         }
         ...
-    ]
+    ],
+    "pinned_repos_total_stars": number
 }
             </code></pre>
         </details>

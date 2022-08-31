@@ -35,6 +35,7 @@ app.get('/:username/', (req, res) => {
 				const html = response.data;
 				const $ = cheerio.load(html);
 				const pinnedRepositories: Array<any> = [];
+				let pinnedRepositoriesStars: number = 0;
 
 				$(".js-pinned-items-reorder-container > ol > li").each((i: any, elem: any) => {
 					const owner: string | null = $(elem).find(".owner").text();
@@ -63,9 +64,12 @@ app.get('/:username/', (req, res) => {
 						stars: stars || 0,
 						forks: forks || 0,
 					});
+
+					pinnedRepositoriesStars = pinnedRepositoriesStars + stars;
 				});
 
 				responseData.pinned_repos = pinnedRepositories;
+				responseData.pinned_repos_total_stars = pinnedRepositoriesStars;
 			
 				res.json(responseData);
 			})

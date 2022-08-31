@@ -59,7 +59,8 @@ Programmed in TypeScript using [`ts-node`](https://www.npmjs.com/package/ts-node
                 "forks": number
             }
             ...
-        ]
+        ],
+        "pinned_repos_total_stars": number
     }
     </code></pre>
 </details>
