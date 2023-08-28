@@ -50,7 +50,7 @@ app.get('/:username/', (req, res) => {
 						$(elem).find('a[href$="/stargazers"]').text().trim()
 					);
 					const forks: number = parseInt(
-						$(elem).find('a[href$="/network/members"]').text().trim()
+						$(elem).find('a[href$="/forks"]').text().trim()
 					);
 
 					pinnedRepositories.push( {
